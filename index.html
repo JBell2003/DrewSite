@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DrewSite - Custom Websites Built Before You Pay</title>
+    <link rel="icon" type="image/png" href="logo.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="logo.png" sizes="16x16">
+    <link rel="apple-touch-icon" href="logo.png">
+    <meta name="theme-color" content="#a855f7">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Background Elements -->
+    <div class="bg-grid"></div>
+
+    <!-- Header Section -->
+    <section class="header">
+        <img src="logo.png" alt="DrewSite Logo" class="logo fade-in">
+        <h1 class="fade-in">DrewSite</h1>
+        <p class="subtitle slide-up">Custom made websites built before you pay</p>
+        <p class="subtitle-2 slide-up">Why you need a website</p>
+        <button class="scroll-indicator" onclick="scrollToNextSection()">
+            <i class="fas fa-chevron-down fa-bounce"></i>
+        </button>
+    </section>
+
+    <!-- Why You Need a Website Section -->
+    <section id="why-section" class="why-section reveal">
+        <div class="container">
+            <div class="two-columns">
+                <div class="left-column">
+                    <h2><i class="fas fa-question-circle"></i> Why you need a website</h2>
+                    <p>Explore the slides to discover why having a website is crucial for your business success in today's digital age.</p>
+                </div>
+                <div class="right-column">
+                    <div class="slider">
+                        <div class="slider-content-container">
+                            <div class="slide-content">
+                                <h3></h3>
+                                <p></p>
+                            </div>
+                        </div>
+                        <div class="slider-controls">
+                            <button class="slider-arrow" onclick="prevSlide()">
+                                <i class="fas fa-chevron-left"></i>
+                            </button>
+                            <button class="slider-arrow" onclick="nextSlide()">
+                                <i class="fas fa-chevron-right"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services-section">
+        <div class="container">
+            <h2 class="reveal"><i class="fas fa-star"></i> What your website will include</h2>
+            <div class="services-grid">
+                <div class="service-card reveal">
+                    <h3><i class="fas fa-laptop-code"></i> Complete Website Package</h3>
+                    <ul>
+                        <li><i class="fas fa-check-circle"></i>Home, About, Services, Reviews, and Contact sections</li>
+                        <li><i class="fas fa-pencil-alt"></i>Professional copywriting and content optimization</li>
+                        <li><i class="fas fa-search"></i>SEO optimization</li>
+                        <li><i class="fas fa-mobile-alt"></i>Mobile-responsive design</li>
+                        <li><i class="fas fa-bolt"></i>Fast loading speeds</li>
+                    </ul>
+                </div>
+                <div class="service-card reveal">
+                    <h3><i class="fas fa-cogs"></i> Business Integration</h3>
+                    <ul>
+                        <li><i class="fas fa-envelope"></i>Contact form with email integration</li>
+                        <li><i class="fas fa-clock"></i>Business hours and location</li>
+                        <li><i class="fas fa-share-alt"></i>Social media links</li>
+                        <li><i class="fas fa-chart-line"></i>Google Analytics integration</li>
+                        <li><i class="fas fa-map-marker-alt"></i>Google reviews and Maps integration</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="pricing-section reveal">
+        <div class="container">
+            <h2><i class="fas fa-tags"></i> Choose Your Plan</h2>
+            <div class="pricing-grid">
+                <!-- Custom Website Plan -->
+                <div class="pricing-card reveal">
+                    <h3>Custom Website</h3>
+                    <div class="price">$500</div>
+                    <p>Get a professionally designed website tailored to your business needs with expert copywriting and modern design.</p>
+                    
+                    <ul class="pricing-features">
+                        <li><i class="fas fa-check"></i>Full custom website design and development</li>
+                        <li><i class="fas fa-check"></i>Professional copywriting and content optimization</li>
+                        <li><i class="fas fa-check"></i>Mobile-responsive design</li>
+                        <li><i class="fas fa-check"></i>SEO optimization</li>
+                        <li><i class="fas fa-check"></i>Contact form integration</li>
+                        <li><i class="fas fa-check"></i>One-time payment, website is yours forever</li>
+                    </ul>
+                    
+                    <button class="pricing-btn" onclick="window.location.href='https://buy.stripe.com/fZudR2ga662n92k5aG2sM02'">
+                        Choose Custom Website
+                    </button>
+                </div>
+
+                <!-- Managed Website Plan -->
+                <div class="pricing-card reveal">
+                    <h3>Managed Website Plan</h3>
+                    <div class="price">$300</div>
+                    <div class="monthly-price">+ $50/month</div>
+                    <p class="highlight">Save $200 on setup with our managed plan!</p>
+                    
+                    <ul class="pricing-features">
+                        <li><i class="fas fa-check"></i>Everything in Custom Website plan</li>
+                        <li><i class="fas fa-check"></i>Fast and reliable website hosting</li>
+                        <li><i class="fas fa-check"></i>Regular maintenance and updates</li>
+                        <li><i class="fas fa-check"></i>Security monitoring and backups</li>
+                        <li><i class="fas fa-check"></i>Up to 3 content edits per month</li>
+                        <li><i class="fas fa-check"></i>Priority support and assistance</li>
+                    </ul>
+                    
+                    <button class="pricing-btn" onclick="window.location.href='https://buy.stripe.com/7sYbIUe1YfCX0vO8mS2sM01'">
+                        Choose Managed Plan
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section">
+        <div class="container">
+            <h2 class="reveal"><i class="fas fa-paper-plane"></i> Get in Touch</h2>
+            <p class="reveal">Ready to take your business to the next level? Let's discuss your website needs.</p>
+            
+            <form id="contactForm" class="contact-form reveal">
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="name"><i class="fas fa-user"></i> Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email"><i class="fas fa-envelope"></i> Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="message"><i class="fas fa-comment"></i> Message</label>
+                    <textarea id="message" name="message" rows="4" required></textarea>
+                </div>
+                <div id="formStatus" class="form-status"></div>
+                <button type="submit" class="btn">
+                    <i class="fas fa-paper-plane"></i> Send Message
+                </button>
+            </form>
+
+            <div class="contact-info reveal">
+                <p><i class="fas fa-envelope"></i> Email: your.email@example.com</p>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html> 
