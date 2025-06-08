@@ -2,11 +2,11 @@
 const slides = [
     {
         title: "Boost Engagement & Sales",
-        content: "Transform your business with a professional website that delivers measurable results. Our clients experience an average 70% increase in customer engagement and 60% boost in sales revenue. A well-designed website works 24/7 as your digital storefront, continuously converting visitors into valuable customers."
+        content: "Transform your business with a professional website that delivers measurable results. Businesses experience an average 70% increase in customer engagement and 60% boost in sales revenue. A well-designed website works 24/7 as your digital storefront, continuously converting visitors into valuable customers."
     },
     {
         title: "Expanded Reach",
-        content: "Stop missing out on potential customers who are actively searching for your services right now. A strategic online presence positions your business exactly where your ideal customers are looking. With powerful SEO optimization and targeted content, your website becomes the perfect tool for attracting and converting qualified leads."
+        content: "Stop missing out on potential customers who are actively searching for your services right now. A strategic online presence positions your business exactly where your ideal customers are looking. With powerful Search Engine Optimization and targeted content, your website becomes the perfect tool for attracting and converting qualified leads."
     },
     {
         title: "Common Misconception",
