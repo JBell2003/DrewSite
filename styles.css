@@ -621,47 +621,48 @@ textarea:focus {
 
 .slider {
     position: relative;
-    padding: 2rem;
-    overflow: visible;
     width: 100%;
+    padding: 0 2rem;
 }
 
 .slider-controls {
     position: absolute;
     top: 50%;
-    left: 0;
-    right: 0;
+    left: -2rem;
+    right: -2rem;
     transform: translateY(-50%);
     display: flex;
     justify-content: space-between;
-    width: calc(100% + 8rem);
-    margin-left: -4rem;
+    width: calc(100% + 4rem);
     pointer-events: none;
-    z-index: 2;
+    z-index: 10;
 }
 
 .slider-arrow {
-    background: none;
-    border: none;
-    color: var(--primary);
-    font-size: 2rem;
-    cursor: pointer;
-    padding: 1rem;
-    transition: all 0.3s ease;
-    opacity: 0.7;
-    pointer-events: auto;
+    width: 40px;
+    height: 40px;
+    background: var(--dark-lighter);
+    border: 1px solid var(--primary);
+    border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
+    cursor: pointer;
+    pointer-events: auto;
+    position: relative;
 }
 
-.slider-arrow:hover {
-    opacity: 1;
-    color: var(--white);
-    text-shadow: 0 0 10px var(--primary);
+.slider-arrow i {
+    color: var(--primary);
+    font-size: 1.2rem;
 }
 
-/* Mobile adjustments */
+.slider-arrow:hover i,
+.slider-arrow:active i {
+    color: var(--primary);
+}
+
+/* Mobile Adjustments */
 @media (max-width: 768px) {
     h1 {
         font-size: 3rem;
@@ -683,87 +684,51 @@ textarea:focus {
         padding-top: 0;
     }
 
-    .slider {
-        position: relative;
-        padding: 2rem 1rem;
-        overflow: visible;
-        width: 100%;
-    }
-
     .slider-content-container {
-        position: relative;
         height: 500px;
-        margin-bottom: 1rem;
-        overflow: visible;
-    }
-
-    .slide-content {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        top: 0;
-        left: 0;
-        padding: 1rem;
-        opacity: 1;
-        transition: transform 0.5s ease, opacity 0.5s ease;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
+        padding: 0 1rem;
     }
 
     .slide-content h3 {
         font-size: 1.75rem;
-        margin-bottom: 2rem;
+        margin-bottom: 1.5rem;
         padding: 0 1rem;
         white-space: normal;
     }
 
     .slide-content p {
         font-size: 1rem;
-        line-height: 1.8;
-        max-width: 100%;
         padding: 0 1rem;
-        margin: 0;
+        max-width: 100%;
+    }
+
+    .slider {
+        padding: 0;
     }
 
     .slider-controls {
-        position: absolute;
-        top: 50%;
+        position: fixed;
+        width: 100%;
         left: 0;
         right: 0;
-        transform: translateY(-50%);
-        display: flex;
-        justify-content: space-between;
-        width: 100%;
-        padding: 0;
-        z-index: 5;
+        padding: 0 10px;
+        z-index: 1000;
     }
 
     .slider-arrow {
-        background: var(--dark-lighter);
-        border-radius: 50%;
-        width: 40px;
-        height: 40px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 1.25rem;
-        cursor: pointer;
-        opacity: 0.8;
-        backdrop-filter: blur(5px);
-        border: 1px solid rgba(255, 255, 255, 0.1);
-        margin: 0 0.5rem;
-        color: var(--primary);
-        transition: all 0.3s ease;
-        pointer-events: auto;
+        width: 35px;
+        height: 35px;
+        position: fixed;
+        top: 50%;
+        transform: translateY(-50%);
     }
 
-    .slider-arrow:hover {
-        opacity: 1;
-        background: var(--dark-light);
-        color: var(--white);
-        transform: scale(1.1);
+    .slider-arrow:first-child {
+        left: 10px;
+    }
+
+    .slider-arrow:last-child {
+        right: 10px;
     }
 
     .logo {
@@ -797,19 +762,15 @@ textarea:focus {
 
     .slide-content h3 {
         font-size: 1.5rem;
-        margin-bottom: 1.5rem;
     }
 
     .slide-content p {
         font-size: 0.95rem;
-        padding: 0 0.5rem;
     }
 
     .slider-arrow {
-        width: 35px;
-        height: 35px;
-        font-size: 1rem;
-        margin: 0 0.25rem;
+        width: 32px;
+        height: 32px;
     }
 
     .service-card,
