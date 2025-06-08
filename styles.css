@@ -109,17 +109,15 @@ section {
 
     .slider {
         position: relative;
-        padding: 2rem 0;
         width: 100%;
-        overflow: hidden;
+        overflow: visible;
     }
 
     .slider-content-container {
         position: relative;
         height: 500px;
         margin: 0 auto;
-        padding: 0 4rem;
-        overflow: hidden;
+        padding: 0 3.5rem;
     }
 
     .slide-content {
@@ -151,7 +149,7 @@ section {
     }
 
     .slider-controls {
-        position: absolute;
+        position: fixed;
         top: 50%;
         left: 0;
         right: 0;
@@ -159,46 +157,44 @@ section {
         display: flex;
         justify-content: space-between;
         width: 100%;
-        z-index: 5;
+        z-index: 100;
         pointer-events: none;
+        padding: 0 10px;
     }
 
     .slider-arrow {
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
+        width: 40px;
+        height: 40px;
         background: var(--dark-lighter);
+        border: 1px solid var(--primary);
         border-radius: 50%;
-        width: 35px;
-        height: 35px;
         display: flex;
         align-items: center;
         justify-content: center;
-        font-size: 1.25rem;
         cursor: pointer;
-        opacity: 0.8;
-        backdrop-filter: blur(5px);
-        border: 1px solid rgba(255, 255, 255, 0.1);
-        color: var(--primary);
-        transition: opacity 0.3s ease;
         pointer-events: auto;
-        z-index: 10;
+        position: fixed;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 100;
     }
 
     .slider-arrow i {
         color: var(--primary);
+        font-size: 1.2rem;
     }
 
-    .slider-arrow:hover, .slider-arrow:active {
-        opacity: 1;
+    .slider-arrow:hover i,
+    .slider-arrow:active i {
+        color: var(--primary);
     }
 
     .slider-arrow:first-child {
-        left: 0.5rem;
+        left: 10px;
     }
 
     .slider-arrow:last-child {
-        right: 0.5rem;
+        right: 10px;
     }
 }
 
@@ -222,17 +218,20 @@ section {
     }
 
     .slider-arrow {
-        width: 32px;
-        height: 32px;
+        width: 35px;
+        height: 35px;
+    }
+
+    .slider-arrow i {
         font-size: 1rem;
     }
 
     .slider-arrow:first-child {
-        left: 0.75rem;
+        left: 8px;
     }
 
     .slider-arrow:last-child {
-        right: 0.75rem;
+        right: 8px;
     }
 }
 
