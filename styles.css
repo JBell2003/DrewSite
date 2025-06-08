@@ -1,7 +1,7 @@
 /* Base styles */
 :root {
-    --primary: #d17dff;
-    --primary-glow: rgba(209, 125, 255, 0.3);
+    --primary: #9648dd;
+    --primary-glow: rgba(150, 72, 221, 0.3);
     --dark: #0a0a0a;
     --dark-lighter: rgba(30, 30, 30, 0.7);
     --dark-light: rgba(45, 45, 45, 0.9);
