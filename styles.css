@@ -123,9 +123,7 @@ section {
     .slider {
         position: relative;
         padding: 2rem 0;
-        margin: 0 auto;
         width: 100%;
-        max-width: 100%;
         overflow: hidden;
     }
 
@@ -133,12 +131,34 @@ section {
         position: relative;
         height: 500px;
         margin: 0 auto;
-        padding: 0 3rem;
+        padding: 0 3.5rem;
         overflow: hidden;
     }
 
     .slide-content {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 0;
+    }
+
+    .slide-content h3 {
+        font-size: 1.75rem;
+        margin-bottom: 1.5rem;
         padding: 0 1rem;
+        text-align: center;
+        width: 100%;
+    }
+
+    .slide-content p {
+        font-size: 1rem;
+        line-height: 1.8;
+        padding: 0 1rem;
+        text-align: center;
         width: 100%;
         max-width: 100%;
     }
@@ -151,15 +171,16 @@ section {
         transform: translateY(-50%);
         display: flex;
         justify-content: space-between;
-        width: calc(100% - 1rem);
-        margin: 0 0.5rem;
-        padding: 0;
+        width: 100%;
+        padding: 0 0.5rem;
         pointer-events: none;
         z-index: 5;
     }
 
     .slider-arrow {
-        position: relative;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
         background: var(--dark-lighter);
         border-radius: 50%;
         width: 40px;
@@ -179,11 +200,11 @@ section {
     }
 
     .slider-arrow:first-child {
-        margin-left: 0.5rem;
+        left: 0.5rem;
     }
 
     .slider-arrow:last-child {
-        margin-right: 0.5rem;
+        right: 0.5rem;
     }
 }
 
@@ -197,9 +218,13 @@ section {
         padding: 0 2.5rem;
     }
 
-    .slider-controls {
-        width: calc(100% - 0.5rem);
-        margin: 0 0.25rem;
+    .slide-content h3 {
+        font-size: 1.5rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .slide-content p {
+        font-size: 0.95rem;
     }
 
     .slider-arrow {
@@ -209,11 +234,11 @@ section {
     }
 
     .slider-arrow:first-child {
-        margin-left: 0.25rem;
+        left: 0.25rem;
     }
 
     .slider-arrow:last-child {
-        margin-right: 0.25rem;
+        right: 0.25rem;
     }
 }
 
