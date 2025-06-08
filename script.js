@@ -102,6 +102,9 @@ function animateServiceCards() {
 
 // Initialize animations
 document.addEventListener('DOMContentLoaded', () => {
+    // Ensure page starts at top
+    window.scrollTo(0, 0);
+    
     updateSlide();
     reveal();
     animateServiceCards();
@@ -160,4 +163,9 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             behavior: 'smooth'
         });
     });
-}); 
+});
+
+// Force scroll to top on page load/reload
+window.onbeforeunload = function () {
+    window.scrollTo(0, 0);
+}; 
