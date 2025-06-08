@@ -92,10 +92,11 @@ section {
     margin-bottom: 2rem;
     filter: var(--logo-color);
     background: none;
-    -webkit-backface-visibility: hidden;
-    -webkit-transform: translateZ(0) scale(1.0, 1.0);
-    transform: translateZ(0);
-    will-change: filter;
+    border: none;
+    outline: none;
+    box-shadow: none;
+    -webkit-mask-image: none;
+    mask-image: none;
 }
 
 .header h1 {
@@ -106,11 +107,113 @@ section {
 
 @media (max-width: 768px) {
     .logo {
-        max-width: 200px;
+        max-width: 250px;
+        background: none;
+        border: none;
+        outline: none;
+        box-shadow: none;
+        -webkit-mask-image: none;
+        mask-image: none;
     }
     .header h1 {
         margin-top: 0.75rem;
         font-size: 2.5rem;
+    }
+
+    .slider {
+        position: relative;
+        padding: 2rem 0;
+        margin: 0 auto;
+        width: 100%;
+        max-width: 100%;
+        overflow: hidden;
+    }
+
+    .slider-content-container {
+        position: relative;
+        height: 500px;
+        margin: 0 auto;
+        padding: 0 3rem;
+        overflow: hidden;
+    }
+
+    .slide-content {
+        padding: 0 1rem;
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .slider-controls {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        right: 0;
+        transform: translateY(-50%);
+        display: flex;
+        justify-content: space-between;
+        width: calc(100% - 1rem);
+        margin: 0 0.5rem;
+        padding: 0;
+        pointer-events: none;
+        z-index: 5;
+    }
+
+    .slider-arrow {
+        position: relative;
+        background: var(--dark-lighter);
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.25rem;
+        cursor: pointer;
+        opacity: 0.8;
+        backdrop-filter: blur(5px);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        color: var(--primary);
+        transition: all 0.3s ease;
+        pointer-events: auto;
+        z-index: 10;
+    }
+
+    .slider-arrow:first-child {
+        margin-left: 0.5rem;
+    }
+
+    .slider-arrow:last-child {
+        margin-right: 0.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo {
+        max-width: 200px;
+    }
+
+    .slider-content-container {
+        height: 550px;
+        padding: 0 2.5rem;
+    }
+
+    .slider-controls {
+        width: calc(100% - 0.5rem);
+        margin: 0 0.25rem;
+    }
+
+    .slider-arrow {
+        width: 35px;
+        height: 35px;
+        font-size: 1rem;
+    }
+
+    .slider-arrow:first-child {
+        margin-left: 0.25rem;
+    }
+
+    .slider-arrow:last-child {
+        margin-right: 0.25rem;
     }
 }
 
