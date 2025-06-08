@@ -118,7 +118,7 @@ section {
         position: relative;
         height: 500px;
         margin: 0 auto;
-        padding: 0 4rem;
+        padding: 0 3.5rem;
         overflow: hidden;
     }
 
@@ -160,10 +160,11 @@ section {
         justify-content: space-between;
         width: 100%;
         z-index: 5;
+        pointer-events: none;
     }
 
     .slider-arrow {
-        position: absolute;
+        position: fixed;
         top: 50%;
         transform: translateY(-50%);
         background: var(--dark-lighter);
@@ -179,16 +180,23 @@ section {
         backdrop-filter: blur(5px);
         border: 1px solid rgba(255, 255, 255, 0.1);
         color: var(--primary);
-        transition: all 0.3s ease;
+        transition: opacity 0.3s ease;
+        pointer-events: auto;
         z-index: 10;
     }
 
+    .slider-arrow:hover, .slider-arrow:active {
+        opacity: 1;
+        color: var(--primary);
+        transform: translateY(-50%);
+    }
+
     .slider-arrow:first-child {
-        left: 1rem;
+        left: 5px;
     }
 
     .slider-arrow:last-child {
-        right: 1rem;
+        right: 5px;
     }
 }
 
@@ -199,7 +207,7 @@ section {
 
     .slider-content-container {
         height: 550px;
-        padding: 0 3rem;
+        padding: 0 2.5rem;
     }
 
     .slide-content h3 {
@@ -212,17 +220,17 @@ section {
     }
 
     .slider-arrow {
-        width: 30px;
-        height: 30px;
+        width: 32px;
+        height: 32px;
         font-size: 1rem;
     }
 
     .slider-arrow:first-child {
-        left: 0.5rem;
+        left: 3px;
     }
 
     .slider-arrow:last-child {
-        right: 0.5rem;
+        right: 3px;
     }
 }
 
