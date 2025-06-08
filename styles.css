@@ -551,6 +551,54 @@ textarea:focus {
         font-size: 1.5rem;
         padding: 0.75rem;
     }
+
+    /* New mobile-specific slider adjustments */
+    .slider-content-container {
+        height: auto;
+        min-height: 450px;
+        padding: 1rem;
+    }
+
+    .slide-content {
+        position: relative;
+        height: auto;
+    }
+
+    .slide-content h3 {
+        font-size: 1.75rem;
+        white-space: normal;
+        margin-bottom: 1.5rem;
+    }
+
+    .slide-content p {
+        font-size: 1rem;
+        line-height: 1.6;
+        padding: 0 0.5rem;
+    }
+
+    .slider {
+        padding: 1rem;
+    }
+
+    .right-column {
+        margin-top: -2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .slider-content-container {
+        min-height: 500px;
+    }
+
+    .slide-content h3 {
+        font-size: 1.5rem;
+        padding: 0 0.5rem;
+    }
+
+    .slide-content p {
+        font-size: 0.95rem;
+        padding: 0;
+    }
 }
 
 /* Pricing Section */
