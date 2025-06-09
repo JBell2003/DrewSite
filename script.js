@@ -116,43 +116,44 @@ document.addEventListener('DOMContentLoaded', () => {
     const contactForm = document.getElementById('contactForm');
     const formStatus = document.getElementById('formStatus');
 
-    contactForm.addEventListener('submit', async function(e) {
-        e.preventDefault();
-        
-        const submitButton = this.querySelector('button[type="submit"]');
-        
-        // Disable the submit button and show loading state
-        submitButton.disabled = true;
-        submitButton.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
-        formStatus.innerHTML = '';
-        
-        try {
-            // Replace this URL with your Google Apps Script deployment URL
-            const response = await fetch('YOUR_GOOGLE_APPS_SCRIPT_URL', {
-                method: 'POST',
-                body: JSON.stringify({
-                    name: document.getElementById('name').value,
-                    email: document.getElementById('email').value,
-                    message: document.getElementById('message').value
-                })
-            });
+    if (contactForm) {
+        contactForm.addEventListener('submit', async function(e) {
+            e.preventDefault();
             
-            const result = await response.json();
+            const submitButton = this.querySelector('button[type="submit"]');
+            submitButton.disabled = true;
+            submitButton.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
+            formStatus.innerHTML = '';
             
-            if (result.result === 'success') {
-                formStatus.innerHTML = '<div class="success-message">Thank you! Your message has been sent.</div>';
-                this.reset();
-            } else {
-                throw new Error('Submission failed');
+            const formData = {
+                name: this.querySelector('#name').value,
+                email: this.querySelector('#email').value,
+                message: this.querySelector('#message').value
+            };
+            
+            try {
+                const response = await fetch('https://script.google.com/macros/s/AKfycbw8YiN_MBG56uKqr7B7heMMffsoVq1feDPTKIQ9kzCB1gH6u9wKWiLKqkxO8jBphHaoFQ/exec', {
+                    method: 'POST',
+                    body: JSON.stringify(formData)
+                });
+                
+                const result = await response.json();
+                
+                if (result.result === 'success') {
+                    formStatus.innerHTML = '<div class="success-message"><i class="fas fa-check-circle"></i> Message sent successfully!</div>';
+                    contactForm.reset();
+                } else {
+                    throw new Error(result.message || 'Failed to send message');
+                }
+            } catch (error) {
+                formStatus.innerHTML = '<div class="error-message"><i class="fas fa-exclamation-circle"></i> Failed to send message. Please try again.</div>';
+                console.error('Form submission error:', error);
             }
-        } catch (error) {
-            formStatus.innerHTML = '<div class="error-message">Sorry, there was an error sending your message. Please try again.</div>';
-        } finally {
-            // Re-enable the submit button and restore original text
+            
             submitButton.disabled = false;
             submitButton.innerHTML = '<i class="fas fa-paper-plane"></i> Send Message';
-        }
-    });
+        });
+    }
 });
 
 // Smooth scroll for navigation
