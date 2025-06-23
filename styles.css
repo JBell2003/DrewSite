@@ -343,9 +343,22 @@ section {
     margin-top: 2rem;
 }
 
+.services-grid.three-columns {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
 @media (min-width: 768px) {
     .services-grid {
         grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 900px) {
+    .services-grid.three-columns {
+        grid-template-columns: 1fr;
     }
 }
 

@@ -74,3 +74,65 @@ The contact form is ready to be integrated with your preferred email service or 
 ## License
 
 MIT
+
+# Drew's Web Development Chat Interface
+
+A modern chat interface with AI assistance and appointment booking capabilities.
+
+## Local Development
+
+To test the chat interface locally:
+
+1. Install Node.js if you haven't already (https://nodejs.org)
+
+2. Open your terminal and install a simple HTTP server:
+```bash
+npm install -g http-server
+```
+
+3. Navigate to your project directory:
+```bash
+cd path/to/your/project
+```
+
+4. Start the server:
+```bash
+http-server
+```
+
+5. Open your browser and go to:
+```
+http://localhost:8080
+```
+
+## Production Deployment
+
+For production use:
+
+1. Push all files to your GitHub repository
+2. Enable GitHub Pages in your repository settings
+3. The chat interface will be available at your GitHub Pages URL
+
+## Files Structure
+
+- `index.html` - Main webpage
+- `chat.js` - Chat interface logic
+- `chat.css` - Chat interface styling
+- `chatbot-handler.js` - AI and booking integration
+- `pdf-parser.js` - PDF knowledge base parser
+- `knowledge_base.pdf` - Your business knowledge base
+- `knowledge_base.json` - FAQ database
+- `booking.gs` - Google Apps Script for calendar integration
+
+## Configuration
+
+1. DeepSeek API Key is already configured
+2. Google Calendar integration is set up via Apps Script
+3. Knowledge base is loaded from both PDF and JSON sources
+
+## Customization
+
+- Edit `chat.css` to modify the chat interface appearance
+- Update `knowledge_base.json` to modify FAQ responses
+- Replace `knowledge_base.pdf` with your own documentation
+- Adjust business hours in the Google Apps Script

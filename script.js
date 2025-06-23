@@ -1,20 +1,24 @@
 // Slider content
 const slides = [
     {
-        title: "Boost Engagement & Sales",
-        content: "Transform your business with a professional website that delivers measurable results. Businesses experience an average 70% increase in customer engagement and 60% boost in sales revenue. A well-designed website works 24/7 as your digital storefront, continuously converting visitors into valuable customers."
+        title: "Content Drives Results",
+        content: "Businesses that publish regular blogs generate up to 70% more engagement, and content like newsletters is a proven driver of customer retention and repeat business. Quality content builds trust, boosts SEO, and keeps your audience coming back for more."
     },
     {
-        title: "Expanded Reach",
-        content: "Stop missing out on potential customers who are actively searching for your services right now. A strategic online presence positions your business exactly where your ideal customers are looking. With powerful Search Engine Optimization and targeted content, your website becomes the perfect tool for attracting and converting qualified leads."
+        title: "Boost Engagement & Trust",
+        content: "Businesses that publish regular blogs generate up to 70% more engagement, and content like newsletters is a proven driver of customer retention and repeat business."
     },
     {
-        title: "Common Misconception",
-        content: "Think social media presence alone is enough for your business? While 72% of businesses rely solely on social platforms, they're missing out on 81% of customers who specifically look for business websites before making decisions. Don't let a missing website cost you credibility and valuable sales in today's digital-first marketplace."
+        title: "Expand Your Audience",
+        content: "Stop missing out on potential customers who are searching for valuable information. Strategic blog posts and newsletters position your business as an authority, attracting new leads and nurturing loyal clients."
     },
     {
-        title: "Growth Potential",
-        content: "Imagine automating your most time-consuming tasks: answering common questions, booking appointments, and capturing leads—all while you focus on growing your business. A strategic website isn't just another business expense; it's a powerful investment that pays for itself by streamlining operations and driving sustainable, long-term growth."
+        title: "Content vs. Social Media",
+        content: "Think social media alone is enough? 72% of businesses rely only on social, but 81% of customers look for in-depth content like blogs and newsletters before making decisions. Don't let a lack of content cost you credibility and sales."
+    },
+    {
+        title: "Start Simple, Grow Smart",
+        content: "Imagine automating your outreach: answering FAQs, sharing updates, and building relationships—all while you focus on your business. If you don't have a website yet, I can set up a simple site to host your content as an add-on."
     }
 ];
 
